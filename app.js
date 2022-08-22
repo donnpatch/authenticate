@@ -23,7 +23,7 @@ app.use(passport.session());
 app.use("/", authRouter);
 app.use("/", pagesRouter);
 
-mongoose.connect("mongodb+srv://donnpatch:kaisar32182@donpatchluster.za5b0ab.mongodb.net")
+mongoose.connect("mongodb+srv://donnpatch:kaisar32182@donpatchluster.za5b0ab.mongodb.net/forumDB", {useNewUrlParser: true});
 
 app.listen(process.env.PORT || 3000, function(req, res) {
   console.log("Connected to 3000");
